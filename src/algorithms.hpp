@@ -1445,7 +1445,7 @@ struct MetaAlgorithm{
 			ifstream fin(constraintFile);
 			getline(fin, constraintTree);
 		}
-		else{
+		else if (ARG.getStringArg("constraint") == "") {
 			ROUND_NN = 20 + 2 * sqrt(names.size()) * log2(names.size());
 		}
 		
